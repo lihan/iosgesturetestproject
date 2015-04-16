@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9n-hc-4vK">
+                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <view multipleTouchEnabled="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQp-Dh-VvB">
+                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                                <color key="backgroundColor" red="1" green="0.37455803903209473" blue="0.21095560886841147" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cQp-Dh-VvB" firstAttribute="leadingMargin" secondItem="A9n-hc-4vK" secondAttribute="leadingMargin" id="FrR-v8-g9L"/>
+                            <constraint firstItem="cQp-Dh-VvB" firstAttribute="height" secondItem="A9n-hc-4vK" secondAttribute="height" id="K9h-fT-v2r"/>
+                            <constraint firstItem="A9n-hc-4vK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="top" id="LZt-Fv-Wfd"/>
+                            <constraint firstItem="cQp-Dh-VvB" firstAttribute="width" secondItem="A9n-hc-4vK" secondAttribute="width" id="VVb-XX-GLt"/>
+                            <constraint firstItem="cQp-Dh-VvB" firstAttribute="top" secondItem="A9n-hc-4vK" secondAttribute="top" id="YVp-n1-ZGF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A9n-hc-4vK" secondAttribute="trailing" id="iC6-ng-HJt"/>
+                            <constraint firstItem="A9n-hc-4vK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="tC1-aR-XVJ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="bottom" secondItem="A9n-hc-4vK" secondAttribute="bottom" id="vHG-Pn-hhk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="transparentView" destination="cQp-Dh-VvB" id="60U-Di-whT"/>
+                        <outlet property="webView" destination="A9n-hc-4vK" id="7hF-q5-vJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
